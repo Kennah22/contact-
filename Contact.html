@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+        <title> All products-CheLseA Shopping market
+        </title>
+        <link rel="stylesheet" href="style2.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,300;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="navbar">
+                 <div class="log">
+                    <img src="logo2.jpeg"width="125px">
+                 </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index2.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="Contact.html">Contacts</a></li>
+                        <li><a href="Account.html">Account</a></li>
+                    </ul>
+                </nav>
+            <a href="cart.html"><img src="cart icon.png" width="30px" height="30px"></a>
+            <img src="menu icon.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+            
+    </div> 
+    
+<div class="container">
+<form onsubmit="sendEmail(); reset(); return false;">
+    <h3>GET HELP </h3>
+    <input type="text" id="name" placeholder="Your Name"required>
+    <input type="text" id="email" placeholder="Email id"required>
+    <input type="text" id="text" placeholder="Phone no"required> 
+    <textarea id="message" rows="4" placeholder="How can we help you"></textarea>
+    <button type="submit">send</button>
+</form>
+<div class="contact-box">
+    <div class="contact-right">
+        <h3>Reach us</h3>
+      <table>
+        <tr>
+            <td>Email:</td>
+            <td><a href="mailto:kenxervier@gmail.com">email us</a></td>
+        </tr>
+        <tr>
+            <td>Phone call:</td>
+            <td><a href="tel:+25446547289 /+25492709445">call us </td>
+        </tr>
+        <tr>
+            <td>whatssap:</td>
+            <td><a href="https://wa.me/+25492709445">whatsapp us</a></td>
+            <tr>
+                <td>Twitter:</td>
+                <td><a href="https://twitter.com/Kxervier">Tweet</a></td>
+            </tr>
+        </tr>
+      </table>  
+    </div>
+</div>
+</div>
+
+ <!-----------footer-->
+    <div class="footer">
+        
+            <div class="row">
+                <!---<div class="footer-col-1">
+                    <h3> Download our App</h3>
+                    <p> Download App free for Android and ios mobile phone</p>
+                    <div class="app logo">
+                    <img src="playstore.png">
+                    <img src="app store.png">
+                    </div>--->
+                </div>
+                <div class="row">
+                    <div class="footer-col-2">
+                        <h3> Download our App</h3>
+                        <img src="blue logo.png">
+                        <p>Our purpose as the online shopping in to make everyone shine to the ne fashion of chelsea items</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>useful links</h3>
+                        <ul>
+                            <li>coupons</li>
+                            <li>Blog Posts</li>
+                            <li>Return Policy</li>
+                            <li>Join Affiliate</li>
+                        </ul>
+
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>Youtube</li>
+                        </ul>
+                    </div>
+                    </div>
+                    <hr>
+                    <p class="Copyright">copyright 2022-kennah Website</p>
+            </div>
+        </div>
+    </div>
+    <!----------js for toggle menu-->
+    <script>
+        var MenuItems=document.getElementById("MenuItems");
+        MenuItems.style.maxHeight="0px";
+        function menutoggle(){
+            if(MenuItems.style.maxHeight=="0px")
+            {
+                MenuItems.style.maxHeight="200px";
+            }
+            else
+            {   
+                MenuItems.style.maxHeight="0px";
+            }
+        }
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+    Host : "smtp.gmail.com",
+    Username : "kenxervier@gmail.com",
+    Password : "0792709445",
+    To : 'kennethxervier@gmail.com',
+    From : document.getElementById("email)".value,
+    Subject : "New contact form Enquiry",
+    Body : "Name:"+document.getElementById("name").value
+    +"<br> Email:"+document.getElementById("email").value
+    +"<br> Phone no:"+document.getElementById("phone").value
+    +"<br> Message:"+document.getElementById("message").value
+}).then(
+  message => alert("Message sent succefully")
+);
+        }
+    </script>
+    </body>
+</html>
